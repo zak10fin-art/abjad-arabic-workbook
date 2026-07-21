@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="8.75in" height="11.25in" viewBox="0 0 522 675" preserveAspectRatio="xMidYMid meet">
+  <!-- 
+    MASTER BASE TEMPLATE - Abjad Arabic Academy
+    All dimensions in pixels (at 300 DPI: 1 inch = 300px, but using 60px per 0.2in for 72 DPI view)
+    Safe print area: 435 x 600px (7.25" x 10")
+    Bleed area: 522 x 675px (8.75" x 11.25")
+  -->
+  
+  <defs>
+    <!-- Color Palette Definitions -->
+    <style type="text/css">
+      .color-primary-blue { fill: #2980B9; }
+      .color-secondary-blue { fill: #3498DB; }
+      .color-warm-gold { fill: #F1C40F; }
+      .color-charcoal { fill: #2C3E50; }
+      .color-light-gray { fill: #BDC3C7; }
+      .color-soft-cream { fill: #FCF8E3; }
+      .color-accent-green { fill: #2ECC71; }
+      .color-accent-red { fill: #E74C3C; }
+      .color-white { fill: #FFFFFF; }
+      .color-black { fill: #000000; }
+      
+      .stroke-primary-blue { stroke: #2980B9; }
+      .stroke-secondary-blue { stroke: #3498DB; }
+      .stroke-charcoal { stroke: #2C3E50; }
+      
+      /* Typography Styles */
+      .font-title { font-family: Arial, sans-serif; font-size: 30px; font-weight: bold; }
+      .font-heading { font-family: Arial, sans-serif; font-size: 20px; font-weight: bold; }
+      .font-body { font-family: Arial, sans-serif; font-size: 14px; font-weight: normal; }
+      .font-small { font-family: Arial, sans-serif; font-size: 11px; font-weight: normal; }
+      .font-label { font-family: Arial, sans-serif; font-size: 12px; font-weight: bold; }
+      .font-page-number { font-family: Arial, sans-serif; font-size: 10px; font-weight: normal; }
+    </style>
+    
+    <!-- Reusable Components -->
+    
+    <!-- PRIMARY BLUE HEADER STRIP (0.75" = 45px height) -->
+    <g id="header-strip-primary-blue">
+      <rect x="43.5" y="30" width="435" height="45" class="color-primary-blue"/>
+      <rect x="43.5" y="75" width="435" height="2.25" class="color-primary-blue"/>
+    </g>
+    
+    <!-- SECONDARY BLUE HEADER STRIP (0.75" = 45px height) -->
+    <g id="header-strip-secondary-blue">
+      <rect x="43.5" y="30" width="435" height="45" class="color-secondary-blue"/>
+      <rect x="43.5" y="75" width="435" height="2.25" class="color-secondary-blue"/>
+    </g>
+    
+    <!-- PRIMARY BLUE GRADIENT HEADER (for review pages) -->
+    <defs>
+      <linearGradient id="gradient-primary-to-secondary" x1="0%" y1="0%" x2="0%" y2="100%">
+        <stop offset="0%" style="stop-color:#2980B9;stop-opacity:1" />
+        <stop offset="100%" style="stop-color:#3498DB;stop-opacity:1" />
+      </linearGradient>
+    </defs>
+    <g id="header-strip-gradient">
+      <rect x="43.5" y="30" width="435" height="45" fill="url(#gradient-primary-to-secondary)"/>
+      <rect x="43.5" y="75" width="435" height="2.25" class="color-primary-blue"/>
+    </g>
+    
+    <!-- PAGE BORDER - LESSON/VOCABULARY PAGES (Primary Blue) -->
+    <g id="border-frame-primary">
+      <rect x="43.5" y="30" width="435" height="600" fill="none" stroke="#2980B9" stroke-width="2.25"/>
+    </g>
+    
+    <!-- PAGE BORDER - ACTIVITY PAGES (Secondary Blue) -->
+    <g id="border-frame-secondary">
+      <rect x="43.5" y="30" width="435" height="600" fill="none" stroke="#3498DB" stroke-width="3"/>
+    </g>
+    
+    <!-- PAGE BORDER - REVIEW PAGES (Double line) -->
+    <g id="border-frame-double">
+      <rect x="43.5" y="30" width="435" height="600" fill="none" stroke="#2980B9" stroke-width="1.5"/>
+      <rect x="49.5" y="36" width="423" height="588" fill="none" stroke="#2980B9" stroke-width="1.5"/>
+    </g>
+    
+    <!-- FOOTER DECORATIVE LINE -->
+    <g id="footer-line">
+      <line x1="150" y1="615" x2="372" y2="615" stroke="#2980B9" stroke-width="0.75"/>
+      <circle cx="261" cy="615" r="3" class="color-primary-blue"/>
+    </g>
+    
+    <!-- FOOTER DECORATIVE LINE ALTERNATIVE (Accent Green) -->
+    <g id="footer-line-green">
+      <line x1="150" y1="615" x2="372" y2="615" stroke="#2ECC71" stroke-width="0.75"/>
+      <circle cx="261" cy="615" r="3" class="color-accent-green"/>
+    </g>
+    
+    <!-- COMPLETION CHECKBOX -->
+    <g id="checkbox">
+      <rect x="45" y="630" width="12" height="12" fill="none" stroke="#2C3E50" stroke-width="1"/>
+    </g>
+    
+    <!-- SMALL STAR (for progress indicator) -->
+    <g id="star-small">
+      <polygon points="5,0 6,3.75 10,3.75 7.25,6.25 8,10 5,7.5 2,10 2.75,6.25 0,3.75 4,3.75" class="color-accent-green" fill-rule="evenodd"/>
+    </g>
+    
+    <!-- STROKE-ORDER ARROW (Red) -->
+    <g id="arrow-stroke-order">
+      <path d="M 0 0 L 10 -5 L 10 5 Z" class="color-accent-red"/>
+      <line x1="0" y1="0" x2="-30" y2="0" stroke="#E74C3C" stroke-width="2"/>
+    </g>
+    
+  </defs>
+  
+  <!-- DOCUMENT BLEED BACKGROUND -->
+  <rect x="0" y="0" width="522" height="675" class="color-white"/>
+  
+  <!-- SAFE PRINT AREA BOUNDARY (for reference, will be removed in final output) -->
+  <rect x="30" y="30" width="462" height="615" fill="none" stroke="#CCCCCC" stroke-width="0.5" stroke-dasharray="3,3" opacity="0.5"/>
+  
+  <!-- CONTENT AREA BACKGROUND (optional cream tint) -->
+  <rect x="43.5" y="77.25" width="435" height="552.75" class="color-white"/>
+  
+  <!-- TEMPLATE METADATA (for development reference) -->
+  <text x="261" y="350" class="font-body color-light-gray" text-anchor="middle" opacity="0.3">
+    Master Base Template - Replace with actual content
+  </text>
+  
+</svg>
