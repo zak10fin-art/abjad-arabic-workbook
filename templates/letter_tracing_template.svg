@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="8.75in" height="11.25in" viewBox="0 0 522 675" preserveAspectRatio="xMidYMid meet">
+  <!-- 
+    LETTER TRACING PAGE TEMPLATE - Abjad Arabic Academy
+    8.5" × 11" with 0.125" bleed (522px × 675px)
+    Safe print area: 7.25" × 10" (435px × 600px)
+    Dynamic content placeholders for Python injection
+  -->
+  
+  <defs>
+    <style type="text/css">
+      .bg-white { fill: #FFFFFF; }
+      .color-primary-blue { fill: #2980B9; }
+      .color-charcoal { fill: #2C3E50; }
+      .color-light-gray { fill: #BDC3C7; }
+      .color-black { fill: #000000; }
+      .color-accent-red { fill: #E74C3C; }
+      
+      .font-header { font-family: Arial, sans-serif; font-size: 32px; font-weight: bold; color: #FFFFFF; }
+      .font-letter-main { font-family: Arial, sans-serif; font-size: 140px; font-weight: normal; }
+      .font-label { font-family: Arial, sans-serif; font-size: 13px; font-weight: bold; color: #2980B9; }
+      .font-text { font-family: Arial, sans-serif; font-size: 12px; color: #2C3E50; }
+      .font-small { font-family: Arial, sans-serif; font-size: 11px; color: #BDC3C7; }
+      .font-page-num { font-family: Arial, sans-serif; font-size: 10px; color: #BDC3C7; }
+    </style>
+    
+    <marker id="arrow-red" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#E74C3C" />
+    </marker>
+  </defs>
+  
+  <!-- Page Background -->
+  <rect x="0" y="0" width="522" height="675" class="bg-white"/>
+  
+  <!-- Safe Area Guide (non-printing reference) -->
+  <rect x="30" y="30" width="462" height="615" fill="none" stroke="#DDDDDD" stroke-width="0.5" stroke-dasharray="4,4" opacity="0.4"/>
+  
+  <!-- Page Border (Primary Blue) -->
+  <rect x="43.5" y="30" width="435" height="600" fill="none" stroke="#2980B9" stroke-width="2.25"/>
+  
+  <!-- ===== HEADER SECTION (0.5" top margin + 0.75" header = 45px) ===== -->
+  <rect x="43.5" y="30" width="435" height="45" class="color-primary-blue"/>
+  <line x1="43.5" y1="75" x2="478.5" y2="75" stroke="#2980B9" stroke-width="2.25"/>
+  
+  <!-- Lesson Number/Title -->
+  <text x="261" y="62" class="font-header" text-anchor="middle">{{LESSON_NUMBER}}</text>
+  
+  <!-- ===== MAIN LETTER AREA (3.75" = 225px) ===== -->
+  <!-- Letter Tracing Background -->
+  <rect x="65.25" y="100" width="391.5" height="225" fill="none" stroke="#E8F4F8" stroke-width="1" opacity="0.5"/>
+  
+  <!-- Tracing Guide (Light Gray Letter Outline) -->
+  <text x="261" y="295" class="font-letter-main" text-anchor="middle" fill="#BDC3C7" opacity="0.4" font-weight="300">{{LETTER_CHAR}}</text>
+  
+  <!-- Letter Outline (Dark - for tracing reference) -->
+  <text x="261" y="295" class="font-letter-main color-charcoal" text-anchor="middle" fill="none" stroke="#2C3E50" stroke-width="3">{{LETTER_CHAR}}</text>
+  
+  <!-- Stroke Order Arrows (Dynamic Injection Point) -->
+  <g id="stroke-order-area">
+    <!-- Python code will inject arrow groups here -->
+    <!-- Example structure: <g id="arrow-1"><text>1</text><path .../></g> -->
+  </g>
+  
+  <!-- ===== PRONUNCIATION SECTION (1" = 60px) ===== -->
+  <text x="65.25" y="340" class="font-label">{{LETTER_NAME_ARABIC}}</text>
+  <text x="65.25" y="360" class="font-text" font-style="italic">{{PRONUNCIATION_GUIDE}}</text>
+  
+  <!-- ===== VOCABULARY SECTION (2.5" = 150px) ===== -->
+  <text x="65.25" y="405" class="font-label">Vocabulary</text>
+  
+  <!-- Illustration Area (2" × 2" = 120px × 120px) -->
+  <rect x="65.25" y="420" width="120" height="120" fill="none" stroke="#BDC3C7" stroke-width="1.5" stroke-dasharray="3,3"/>
+  <text x="125.25" y="480" class="font-small" text-anchor="middle" opacity="0.6">Illustration</text>
+  
+  <!-- Vocabulary Word -->
+  <text x="205.25" y="445" class="font-letter-main color-black" font-size="24">{{VOCABULARY_WORD_ARABIC}}</text>
+  
+  <!-- Transliteration & Translation -->
+  <text x="205.25" y="465" class="font-text" font-style="italic">{{VOCABULARY_TRANSLITERATION}}</text>
+  <text x="205.25" y="480" class="font-small">{{VOCABULARY_TRANSLATION}}</text>
+  
+  <!-- ===== FOOTER SECTION (1" = 60px) ===== -->
+  <!-- Decorative Line -->
+  <line x1="150" y1="615" x2="372" y2="615" stroke="#2980B9" stroke-width="0.75"/>
+  <circle cx="261" cy="615" r="3" class="color-primary-blue"/>
+  
+  <!-- Page Number -->
+  <text x="261" y="665" class="font-page-num" text-anchor="middle">{{PAGE_NUMBER}}</text>
+  
+</svg>
